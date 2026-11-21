@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>التقارير | Smart Water Station</title>
+<meta name="description" content="نظام ذكي لإدارة ومراقبة محطة مياه: جودة المياه، المضخات، الخزان، تعبئة المركبات، الشراكات والطوارئ.">
+<link rel="icon" type="image/png" href="assets/water-station-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ملفات التصميم: كل قسم له ملف مستقل -->
+<link rel="stylesheet" href="css/base.css?v=20261120">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/quality.css">
+<link rel="stylesheet" href="css/pumps.css">
+<link rel="stylesheet" href="css/tank.css">
+<link rel="stylesheet" href="css/vehicles.css">
+<link rel="stylesheet" href="css/partners.css">
+<link rel="stylesheet" href="css/emergency.css">
+<link rel="stylesheet" href="css/analytics.css">
+<link rel="stylesheet" href="css/reports.css">
+<link rel="stylesheet" href="css/footer.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="css/theme.css?v=20261120">
+</head>
+<body data-page="reports">
+
+<!-- أيقونات -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.7C9 7 5.5 10.3 5.5 14.2a6.5 6.5 0 0 0 13 0C18.5 10.3 15 7 12 2.7z"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6.2L4.6 18.4A2 2 0 0 0 6.3 21.5h11.4a2 2 0 0 0 1.7-3.1L14 9.2V3"/><path d="M7.5 15h9"/></symbol>
+    <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></symbol>
+    <symbol id="i-tank" viewBox="0 0 24 24"><path d="M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M4 12c2-1.5 4-1.5 6 0s4 1.5 6 0 3-1 4 0"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.5c2.4 0 4.5 1.6 4.5 4.5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2.5 20h19L12 3z"/><path d="M12 10v5M12 17.8v.2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-5M12 16V8M16 16v-8"/></symbol>
+    <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.3 6.8a8 8 0 1 0 11.4 0"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9h-5v-6H9v6H4z"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 3 10.5l7 2.5 2.5 7L21 3z"/></symbol>
+    <symbol id="i-valve" viewBox="0 0 24 24"><path d="M12 4v6M8 4h8M3 14h18M6 11l-3 3 3 3M18 11l3 3-3 3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="s-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z"/></symbol>
+    <symbol id="s-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6"/></symbol>
+    <symbol id="s-whatsapp" viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.3 18.8L4 20z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8a4 4 0 0 1-2-2l.8-1-1-2L9 8.5z"/></symbol>
+    <symbol id="s-telegram" viewBox="0 0 24 24"><path d="M21 4 3 11l5.5 2L19 6l-8 8.5V19l3-3 4 3L21 4z"/></symbol>
+    <symbol id="s-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></symbol>
+    <symbol id="s-youtube" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3V9z"/></symbol>
+    <symbol id="s-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.2M12 17v-7M12 13a3 3 0 0 1 6 0v4"/></symbol>
+    <symbol id="s-tiktok" viewBox="0 0 24 24"><path d="M14 3v11a3.5 3.5 0 1 1-3.5-3.5M14 3c.3 2.5 2 4.2 5 4.5"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ شريط التنقل ============ -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-logo-img" src="assets/water-station-logo.png" alt="Smart Water Station logo">
+      <span class="brand-text">Smart Water Station</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="أقسام الموقع">
+      <a href="index.html" data-link="home">الرئيسية</a>
+      <a href="quality.html" data-link="quality">جودة المياه</a>
+      <a href="pumps.html" data-link="pumps">المضخات</a>
+      <a href="tank.html" data-link="tank">الخزان</a>
+      <a href="vehicles.html" data-link="vehicles">تعبئة المركبات</a>
+      <a href="partners.html" data-link="partners">الشراكات</a>
+      <a href="emergency.html" data-link="emergency" class="nav-danger">الطوارئ</a>
+      <a href="analytics.html" data-link="analytics">التحليل والتوقعات</a>
+      <a href="reports.html" data-link="reports">التقارير</a>
+    </nav>
+
+    <div class="nav-status" title="حالة الاتصال بقاعدة البيانات">
+      <span class="conn-dot" id="connDot"></span>
+      <span id="connText">جارٍ الاتصال…</span>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<section id="reports" class="section alt">
+  <div class="container">
+    <div class="section-head no-print">
+      <span class="eyebrow">التقارير</span>
+      <h2>تقارير السحب والطباعة</h2>
+      <p>اختر الفترة والشركة، ثم اطبع التقرير أو صدّره كملف CSV. يتضمن ملخص السحب وتفاصيل كل عملية وأرصدة حصص الشركات.</p>
+    </div>
+
+    <div class="card rp-controls no-print">
+      <div class="presets" id="rpPresets">
+        <button class="chip active" data-preset="today" type="button">اليوم</button>
+        <button class="chip" data-preset="yesterday" type="button">أمس</button>
+        <button class="chip" data-preset="7d" type="button">آخر 7 أيام</button>
+        <button class="chip" data-preset="30d" type="button">آخر 30 يوماً</button>
+        <button class="chip" data-preset="all" type="button">الكل</button>
+        <button class="chip" data-preset="custom" type="button">فترة مخصصة</button>
+      </div>
+      <div class="custom-range" id="rpCustom" hidden>
+        <label>من <input type="datetime-local" id="rpFrom"></label>
+        <label>إلى <input type="datetime-local" id="rpTo"></label>
+        <button class="btn btn-primary btn-sm" id="rpApply" type="button">تطبيق</button>
+      </div>
+      <div class="rp-row">
+        <label class="rp-filter">الشركة
+          <select id="rpPartner"><option value="">كل الشركات والبيع المباشر</option></select>
+        </label>
+        <div class="rp-btns">
+          <button class="btn btn-primary" id="rpShow" type="button">عرض التقرير</button>
+          <button class="btn btn-ghost" id="rpCsv" type="button"><svg class="i"><use href="#i-download"/></svg> تصدير CSV</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="rpPreview" hidden>
+      <div class="rp-preview-actions no-print">
+        <button class="btn btn-primary" id="rpPrint" type="button">طباعة التقرير</button>
+        <button class="btn btn-ghost" id="rpClose" type="button">إغلاق التقرير</button>
+      </div>
+    <article class="rp-sheet" id="rpSheet">
+      <header class="rp-head">
+        <div class="rp-brand"><img class="rp-logo-img" src="assets/water-station-logo.png" alt="Smart Water Station"><div><h3>محطة المياه الذكية</h3><p>إدارة التشغيل وتوزيع المياه</p><small>Smart Water Station</small></div></div>
+        <div class="rp-office"><b>تقرير تشغيلي</b><span>سجل سحب وتوزيع المياه</span><small id="rpContact"></small></div>
+      </header>
+      <div class="rp-banner"><div><h3>تقرير سحب وتوزيع المياه</h3><span>WATER DISTRIBUTION REPORT</span></div><div class="rp-stamp">تاريخ إصدار التقرير<b id="rpPrinted">—</b></div></div>
+      <div class="rp-meta" id="rpMeta">—</div>
+      <div class="rp-summary">
+        <div><span>عدد عمليات التعبئة</span><b id="rpKOps">—</b></div>
+        <div><span>إجمالي المسحوب (لتر)</span><b id="rpKLiters">—</b></div>
+        <div><span>إجمالي المسحوب (م³)</span><b id="rpKM3">—</b></div>
+      </div>
+      <h4 class="rp-title">تفاصيل عمليات التعبئة</h4>
+      <div class="table-wrap">
+        <table class="rp-table">
+          <thead><tr>
+            <th>#</th><th>التاريخ والوقت</th><th>المركبة</th><th>السائق</th><th>الشركة / الجهة</th>
+            <th>المعبّأ (لتر)</th><th>المعبّأ (كوب)</th><th>الحالة</th>
+          </tr></thead>
+          <tbody id="rpBody"></tbody>
+          <tfoot id="rpFoot"></tfoot>
+        </table>
+      </div>
+
+      <div class="rp-totals">
+        <div><span>نسبة المسحوب من سعة الخزان</span><b id="rpKPct">—</b></div>
+        <div><span>منسوب الخزان عند إصدار التقرير</span><b id="rpKTank">—</b></div>
+        <div class="rp-total"><span>القيمة التقديرية للمياه المسحوبة (USD)</span><b><span id="rpKValue">—</span> $</b></div>
+      </div>
+      <p class="rp-disclaimer">القيمة تقديرية وفق السعر المحدد في النظام، ولا تُعدّ إثبات دفع أو فاتورة ضريبية.</p>
+      <h4 class="rp-title">أرصدة حصص الشركات</h4>
+      <div class="table-wrap">
+        <table class="rp-table">
+          <thead><tr>
+            <th>الشركة</th><th>الحالة</th><th>الحصة (لتر)</th><th>تم تفريغه (لتر)</th>
+            <th>المتبقي (لتر)</th><th>الأيام المتبقية</th><th>المركبات المرتبطة</th>
+          </tr></thead>
+          <tbody id="rpPartnersBody"></tbody>
+        </table>
+      </div>
+
+      <div class="rp-notes"><h4>ملاحظات التقرير</h4><p>• تفاصيل التقرير تشمل عمليات التعبئة المكتملة فعلياً فقط، وتعتمد الكمية المقاسة المسجلة في Firebase.</p><p>• الحصة المستخدمة تشمل الكميات المحجوزة للطلبات المرسلة والجارية. الرمز (*) يدل على كمية تقديرية لم يرسل الجهاز قياسها.</p><p>• يُراجع التقرير ويُعتمد من المسؤول المختص قبل استخدامه كمستند إداري.</p></div>
+      <footer class="rp-sign">
+        <div><b>إعداد التقرير</b><span>الاسم: ................................</span><small>التوقيع</small></div>
+        <div><b>المراجعة والاعتماد</b><span>الاسم: ................................</span><small>التوقيع</small></div>
+        <div><b>الجهة المستلمة</b><span>الاسم: ................................</span><small>التوقيع</small></div>
+        <div class="rp-seal"><b>ختم المحطة</b><span></span></div>
+      </footer>
+      <div class="rp-bottom"><span>صدر إلكترونيًا عن نظام إدارة محطة المياه الذكية</span><span>Smart Water Station</span></div>
+    </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-wave" aria-hidden="true"></div>
+  <div class="container footer-grid">
+
+    <!-- التعريف + التواصل الاجتماعي -->
+    <div class="f-col f-about">
+      <a href="index.html" class="brand">
+        <img class="brand-logo-img" src="assets/water-station-logo.png" alt="Smart Water Station logo">
+        <span class="brand-text">Smart Water Station</span>
+      </a>
+      <p>Smart Water Station — منصة ذكية لمراقبة جودة المياه والمضخات والخزان وإدارة تعبئة المركبات وعقود المؤسسات.</p>
+      <h5>تابعنا</h5>
+      <ul class="social" id="fSocial" aria-label="مواقع التواصل الاجتماعي"></ul>
+    </div>
+
+    <!-- روابط سريعة -->
+    <div class="f-col">
+      <h4>أقسام الموقع</h4>
+      <ul class="f-links">
+        <li><a href="quality.html">جودة المياه</a></li>
+        <li><a href="pumps.html">المضخات</a></li>
+        <li><a href="tank.html">الخزان</a></li>
+        <li><a href="vehicles.html">تعبئة المركبات</a></li>
+        <li><a href="partners.html">الشراكات</a></li>
+        <li><a href="emergency.html">الطوارئ والأمان</a></li>
+        <li><a href="analytics.html">التحليل والتوقعات</a></li>
+        <li><a href="reports.html">التقارير</a></li>
+      </ul>
+    </div>
+
+    <!-- الدعم الفني -->
+    <div class="f-col">
+      <h4>الدعم الفني</h4>
+      <ul class="f-contact" id="fPhones"></ul>
+      <ul class="f-contact">
+        <li><svg class="i"><use href="#i-mail"/></svg><div><span>البريد الإلكتروني</span><a id="fEmail" href="#" dir="ltr">—</a></div></li>
+        <li><svg class="i"><use href="#i-clock"/></svg><div><span>ساعات الدعم</span><b id="fHours">—</b></div></li>
+        <li><svg class="i"><use href="#i-pin"/></svg><div><span>العنوان</span><b id="fAddress">—</b></div></li>
+      </ul>
+    </div>
+
+    <!-- الخريطة -->
+    <div class="f-col f-map">
+      <h4>موقع المحطة</h4>
+      <div class="map-box">
+        <iframe id="fMap" title="خريطة موقع المحطة" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="map-actions">
+        <a class="btn btn-ghost btn-sm" id="fMapOpen" target="_blank" rel="noopener"><svg class="i"><use href="#i-pin"/></svg> فتح في الخرائط</a>
+        <a class="btn btn-primary btn-sm" id="fMapRoute" target="_blank" rel="noopener"><svg class="i"><use href="#i-send"/></svg> الاتجاهات</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© <span id="fYear"></span> Smart Water Station — جميع الحقوق محفوظة</span>
+      <span>بيانات حيّة عبر Firebase Realtime Database</span>
+    </div>
+  </div>
+</footer>
+
+<div id="toastRoot" class="toast-root" aria-live="polite"></div>
+
+<!-- ملفات البرمجة: كل قسم له ملف مستقل -->
+<script src="js/config.js"></script>
+<script src="js/firebase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/quality.js"></script>
+<script src="js/tank.js"></script>
+<script src="js/pumps.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/vehicles.js"></script>
+<script src="js/partners.js"></script>
+<script src="js/emergency.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/reports.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
