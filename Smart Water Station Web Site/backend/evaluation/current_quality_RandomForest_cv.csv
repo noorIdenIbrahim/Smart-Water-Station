@@ -1,0 +1,5 @@
+mean_fit_time,std_fit_time,mean_score_time,std_score_time,param_max_depth,param_min_samples_leaf,params,split0_test_score,split1_test_score,split2_test_score,mean_test_score,std_test_score,rank_test_score
+0.611199696858724,0.012871380099823212,0.015519936879475912,0.0005393458398053159,,1,"{'max_depth': None, 'min_samples_leaf': 1}",1.0,1.0,1.0,1.0,0.0,1
+0.6123053232828776,0.0048822804775717175,0.015352567036946615,0.00013918640777545562,,4,"{'max_depth': None, 'min_samples_leaf': 4}",1.0,1.0,1.0,1.0,0.0,1
+0.6195517381032308,0.007391380886894119,0.017185211181640625,0.0025874017366806336,10,1,"{'max_depth': 10, 'min_samples_leaf': 1}",1.0,1.0,1.0,1.0,0.0,1
+0.6016357739766439,0.008257353628444679,0.015299081802368164,0.00021564676018619405,10,4,"{'max_depth': 10, 'min_samples_leaf': 4}",1.0,1.0,1.0,1.0,0.0,1

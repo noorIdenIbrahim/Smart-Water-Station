@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>التحليل والتوقعات | Smart Water Station</title>
+<meta name="description" content="نظام ذكي لإدارة ومراقبة محطة مياه: جودة المياه، المضخات، الخزان، تعبئة المركبات، الشراكات والطوارئ.">
+<link rel="icon" type="image/svg+xml" href="assets/water-drops-logo.svg?v=20261121">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ملفات التصميم: كل قسم له ملف مستقل -->
+<link rel="stylesheet" href="css/base.css?v=20261120">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/quality.css">
+<link rel="stylesheet" href="css/pumps.css">
+<link rel="stylesheet" href="css/tank.css">
+<link rel="stylesheet" href="css/vehicles.css">
+<link rel="stylesheet" href="css/partners.css?v=partners20261121">
+<link rel="stylesheet" href="css/emergency.css">
+<link rel="stylesheet" href="css/analytics.css?v=sensors2">
+<link rel="stylesheet" href="css/reports.css">
+<link rel="stylesheet" href="css/footer.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="css/theme.css?v=brand20261121">
+</head>
+<body data-page="analytics">
+
+<!-- أيقونات -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.7C9 7 5.5 10.3 5.5 14.2a6.5 6.5 0 0 0 13 0C18.5 10.3 15 7 12 2.7z"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6.2L4.6 18.4A2 2 0 0 0 6.3 21.5h11.4a2 2 0 0 0 1.7-3.1L14 9.2V3"/><path d="M7.5 15h9"/></symbol>
+    <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></symbol>
+    <symbol id="i-tank" viewBox="0 0 24 24"><path d="M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M4 12c2-1.5 4-1.5 6 0s4 1.5 6 0 3-1 4 0"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.5c2.4 0 4.5 1.6 4.5 4.5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2.5 20h19L12 3z"/><path d="M12 10v5M12 17.8v.2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-5M12 16V8M16 16v-8"/></symbol>
+    <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.3 6.8a8 8 0 1 0 11.4 0"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9h-5v-6H9v6H4z"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 3 10.5l7 2.5 2.5 7L21 3z"/></symbol>
+    <symbol id="i-valve" viewBox="0 0 24 24"><path d="M12 4v6M8 4h8M3 14h18M6 11l-3 3 3 3M18 11l3 3-3 3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="s-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z"/></symbol>
+    <symbol id="s-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6"/></symbol>
+    <symbol id="s-whatsapp" viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.3 18.8L4 20z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8a4 4 0 0 1-2-2l.8-1-1-2L9 8.5z"/></symbol>
+    <symbol id="s-telegram" viewBox="0 0 24 24"><path d="M21 4 3 11l5.5 2L19 6l-8 8.5V19l3-3 4 3L21 4z"/></symbol>
+    <symbol id="s-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></symbol>
+    <symbol id="s-youtube" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3V9z"/></symbol>
+    <symbol id="s-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.2M12 17v-7M12 13a3 3 0 0 1 6 0v4"/></symbol>
+    <symbol id="s-tiktok" viewBox="0 0 24 24"><path d="M14 3v11a3.5 3.5 0 1 1-3.5-3.5M14 3c.3 2.5 2 4.2 5 4.5"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ شريط التنقل ============ -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-logo-img" src="assets/water-drops-logo.svg?v=20261121" alt="Smart Water Station logo">
+      <span class="brand-text">Smart Water Station</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="أقسام الموقع">
+      <a href="index.html" data-link="home">الرئيسية</a>
+      <a href="quality.html" data-link="quality">جودة المياه</a>
+      <a href="pumps.html" data-link="pumps">المضخات</a>
+      <a href="tank.html" data-link="tank">الخزان</a>
+      <a href="vehicles.html" data-link="vehicles">تعبئة المركبات</a>
+      <a href="partners.html" data-link="partners">الشراكات</a>
+      <a href="emergency.html" data-link="emergency" class="nav-danger">الطوارئ</a>
+      <a href="analytics.html" data-link="analytics">التحليل والتوقعات</a>
+      <a href="reports.html" data-link="reports">التقارير</a>
+    </nav>
+
+    <div class="nav-status" title="حالة الاتصال بقاعدة البيانات">
+      <span class="conn-dot" id="connDot"></span>
+      <span id="connText">جارٍ الاتصال…</span>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<section id="analytics" class="section">
+  <div class="container">
+    <div class="section-head analytics-heading"><div>
+      <span class="workspace-label">محطة المياه الذكية / مركز التحليلات</span><span class="eyebrow">الرؤية التشغيلية للمحطة</span>
+      <h2>كل قرار يبدأ بقراءة واضحة.</h2>
+      <p>تابع القراءات الفعلية وسجل التعبئة، واستعرض نتائج الموديلات وخطة احتياج الغد عند اتصال برنامج التحليل.</p>
+    </div><span class="workspace-date">الجودة · الإنذار المبكر · خطة الغد</span></div>
+
+    <div class="ai-banner"><div><span class="ai-pill">التحليل الذكي</span><h3>من القراءات الحالية إلى احتياج الغد</h3><p>الرسوم التاريخية بيانات مسجلة. الجودة والإنذار من موديلات مدرّبة. احتياج الغد حساب للحجوزات و5 أفراد والمخزون والاحتياطي.</p></div><span id="mlConnection" role="status">جارٍ الاتصال…</span></div>
+    <p id="mlService" role="status">بانتظار الاتصال ببرنامج التحليل…</p><div class="ai-kpis">
+      <article class="card"><span>إجمالي الطلب المتوقع للغد</span><strong id="mlDemand">—</strong><small id="mlDemandNote">الموديل لم يُجهّز بعد</small></article>
+      <article class="card"><span>المخزون المحسوب من مستوى الخزان</span><strong id="mlStock">—</strong><small>حساب هندسي للكمية، دون تأكيد جودة المخزون</small></article>
+      <article class="card"><span>المياه الإضافية المطلوبة للغد</span><strong id="mlProduction">—</strong><small id="mlProductionNote">بانتظار توقع الطلب ومخزون صالح مؤكّد</small></article>
+      <article class="card"><span>نتيجة موديل جودة المياه</span><strong id="mlQuality">—</strong><small id="mlQualityNote">الموديل لم يُجهّز بعد</small></article>
+    </div>
+    <article class="card warning-panel"><div><h4>متابعة استباقية · الدقيقة القادمة</h4><strong id="mlWarning">—</strong></div><p id="mlWarningNote" role="status">بانتظار القراءات…</p></article>
+    <div class="an-grid ai-overview">
+      <article class="card"><div class="ai-card-head"><div><h4 class="card-title">خطة المياه للغد (م³)</h4><p class="ai-note">الحجوزات المؤكدة منفصلة عن الطلب الإضافي المتوقع.</p></div><span class="ai-pill" id="mlForecastBadge">بانتظار الموديل</span></div><p class="ai-empty" id="mlForecastEmpty">الموديل لم يُجهّز بعد. لن تُعرض كميات تقديرية تلقائية.</p><div class="chart-box" id="mlForecastBox" hidden><canvas id="mlForecastChart" role="img" aria-label="حجوزات الغد والطلب الإضافي المتوقع"></canvas></div><p class="ai-note" id="mlForecastMeta"></p></article>
+      <article class="card"><h4 class="card-title">متابعة الفلتر والمضخات</h4><p class="ai-note">تشغيل GPIO هو أمر تشغيل؛ لا يؤكد الدوران أو التدفق الفعلي.</p><div class="ai-equipment" id="mlEquipment"></div><p class="ai-note" id="mlEquipmentMeta">تحليل الأعطال: الموديل لم يُجهّز بعد.</p></article>
+    </div>
+    <article class="card ai-quality"><div class="ai-card-head"><div><h4 class="card-title">جميع حساسات جودة المياه</h4><p class="ai-note">أربعة حساسات في لوحة واحدة؛ لكل حساس لون ومقياس مستقل. الخط المتقطع يوضح حدود التشغيل.</p></div></div><p id="mlHistoryNote" class="ai-note" role="status">بانتظار سجل مؤرّخ…</p><div class="sensor-overview-grid"><section class="sensor-trend-card" style="--sensor-color:#7c3aed"><header><h5><span class="sensor-dot"></span>الحموضة pH</h5><span class="sensor-unit">pH</span></header><strong id="sensorValue_ph" dir="ltr">—</strong><small>القيمة في آخر سجل معروض</small><div class="sensor-chart"><canvas id="sensorChart_ph" role="img" aria-label="تغيّر الحموضة pH وحدود التشغيل"></canvas></div></section><section class="sensor-trend-card" style="--sensor-color:#2563eb"><header><h5><span class="sensor-dot"></span>الأملاح TDS</h5><span class="sensor-unit">ppm</span></header><strong id="sensorValue_tds" dir="ltr">—</strong><small>القيمة في آخر سجل معروض</small><div class="sensor-chart"><canvas id="sensorChart_tds" role="img" aria-label="تغيّر الأملاح TDS وحدود التشغيل"></canvas></div></section><section class="sensor-trend-card" style="--sensor-color:#b7791f"><header><h5><span class="sensor-dot"></span>العكارة</h5><span class="sensor-unit">NTU</span></header><strong id="sensorValue_turbidity" dir="ltr">—</strong><small>القيمة في آخر سجل معروض</small><div class="sensor-chart"><canvas id="sensorChart_turbidity" role="img" aria-label="تغيّر العكارة وحدود التشغيل"></canvas></div></section><section class="sensor-trend-card" style="--sensor-color:#0f8b78"><header><h5><span class="sensor-dot"></span>الأكسجين الذائب</h5><span class="sensor-unit">mg/L</span></header><strong id="sensorValue_dissolved_oxygen" dir="ltr">—</strong><small>القيمة في آخر سجل معروض</small><div class="sensor-chart"><canvas id="sensorChart_dissolved_oxygen" role="img" aria-label="تغيّر الأكسجين الذائب وحدود التشغيل"></canvas></div></section></div><p class="ai-note" id="mlLiveNote">لا توجد قراءة لحظية بعد.</p></article>
+    <article class="card ai-compare"><h4 class="card-title">التوقع السابق مقابل الطلب الفعلي (م³)</h4><p class="ai-note">تُقارن الأيام المكتملة باستخدام التوقع الصادر قبل يوم التسليم.</p><p id="mlCompareEmpty" class="ai-empty">لا توجد توقعات موثّقة ونتائج فعلية للمقارنة بعد.</p><div class="chart-box" id="mlCompareBox" hidden><canvas id="mlCompareChart" role="img" aria-label="مقارنة الطلب المتوقع والفعلي"></canvas></div></article>
+    <article class="card planning-panel"><span class="eyebrow">تنظيم التشغيل</span><h3>حجوزات واضحة. خطة جاهزة للغد.</h3>
+<p>سجّل موعد وكمية كل تعبئة. لا تُنقل الكمية غير المنفذة إلى الغد تلقائيًا؛ المتبقي الفعلي يبقى في مخزون الخزان.</p>
+<form id="planningSettings"><label>سعة الخزان (م³) <input name="capacity" type="number" step="0.001" min="0.001" required></label> <label>الاحتياطي (%) <input name="reserve" type="number" min="0" max="100" step="0.1" required></label><label><input name="linear" type="checkbox" required> الخزان رأسي ثابت المقطع؛ الحجم يتناسب مع المنسوب</label><button class="btn btn-primary" type="submit">حفظ الإعدادات</button></form>
+<p>القيم الأولية من إعدادات الموقع؛ احفظها بعد التحقق. الخزان الأفقي يحتاج معادلة حجم مختلفة.</p>
+<form id="deliveryForm"><label>العقد المدفوع <select name="partner" id="schedulePartner" required></select></label> <label>تاريخ التعبئة <input name="date" type="date" required></label> <label>الكمية (م³) <input name="quantity" type="number" min="0.001" step="0.001" required></label><button class="btn btn-primary" type="submit">إضافة موعد تعبئة</button></form>
+<p id="scheduleStatus" role="status">لم يُراجع الجدول بعد</p><button id="confirmSchedule" class="btn" type="button">تأكيد مراجعة جدول الحجوزات</button>
+<p>راجع الجدول حتى إذا لم توجد حجوزات؛ التأكيد يسمح بحساب صفر حجوزات بصورة صريحة. حدّث المنفذ فعليًا من سجل التعبئة؛ لا تدخل الكمية المتبقية كحجز جديد دون موعد.</p>
+<div style="overflow:auto"><table><thead><tr><th>العقد</th><th>الموعد</th><th>المحجوز م³</th><th>المنفذ م³</th><th>الحالة / الإجراء</th></tr></thead><tbody id="scheduleRows"></tbody></table></div></article>
+    <h3 class="ai-section-title">سجل السحب والتعبئة</h3>
+
+    <div class="card an-controls">
+      <div class="presets" id="anPresets">
+        <button class="chip active" data-preset="today" type="button">اليوم</button>
+        <button class="chip" data-preset="yesterday" type="button">أمس</button>
+        <button class="chip" data-preset="7d" type="button">آخر 7 أيام</button>
+        <button class="chip" data-preset="custom" type="button">فترة مخصصة</button>
+      </div>
+      <div class="custom-range" id="anCustom" hidden>
+        <label>من <input type="datetime-local" id="anFrom"></label>
+        <label>إلى <input type="datetime-local" id="anTo"></label>
+        <button class="btn btn-primary btn-sm" id="anApply" type="button">تطبيق</button>
+      </div>
+      <p class="range-label" id="anRangeLabel"></p>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi"><span>إجمالي المسحوب (لتر)</span><strong id="anTotal">—</strong></div>
+      <div class="kpi"><span>نسبة السحب من سعة الخزان</span><strong id="anPct">—</strong></div>
+      <div class="kpi"><span>ساعة الذروة</span><strong id="anPeak">—</strong></div>
+      <div class="kpi"><span>أكثر الفترات سحباً</span><strong id="anPeriod">—</strong></div>
+      <div class="kpi"><span>عدد عمليات التعبئة</span><strong id="anOps">—</strong></div>
+      <div class="kpi"><span>الاستهلاك التراكمي (الجهاز)</span><strong id="anCum">—</strong></div>
+    </div>
+
+    <p class="an-empty" id="anEmpty" hidden>لا توجد عمليات تعبئة مسجّلة في الفترة المختارة.</p>
+
+    <div class="an-grid">
+      <div class="card"><h4 class="card-title">السحب حسب ساعات اليوم (لتر)</h4><div class="chart-box"><canvas id="chHour"></canvas></div></div>
+      <div class="card"><h4 class="card-title">السحب اليومي ضمن الفترة (لتر)</h4><div class="chart-box"><canvas id="chDay"></canvas></div></div>
+
+      <div class="card"><h4 class="card-title">تغيّر المنسوب في آخر القراءات (%)</h4><div class="chart-box"><canvas id="chHistory"></canvas></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-wave" aria-hidden="true"></div>
+  <div class="container footer-grid">
+
+    <!-- التعريف + التواصل الاجتماعي -->
+    <div class="f-col f-about">
+      <a href="index.html" class="brand">
+        <img class="brand-logo-img" src="assets/water-drops-logo.svg?v=20261121" alt="Smart Water Station logo">
+        <span class="brand-text">Smart Water Station</span>
+      </a>
+      <p>Smart Water Station — منصة ذكية لمراقبة جودة المياه والمضخات والخزان وإدارة تعبئة المركبات وعقود المؤسسات.</p>
+      <h5>تابعنا</h5>
+      <ul class="social" id="fSocial" aria-label="مواقع التواصل الاجتماعي"></ul>
+    </div>
+
+    <!-- روابط سريعة -->
+    <div class="f-col">
+      <h4>أقسام الموقع</h4>
+      <ul class="f-links">
+        <li><a href="quality.html">جودة المياه</a></li>
+        <li><a href="pumps.html">المضخات</a></li>
+        <li><a href="tank.html">الخزان</a></li>
+        <li><a href="vehicles.html">تعبئة المركبات</a></li>
+        <li><a href="partners.html">الشراكات</a></li>
+        <li><a href="emergency.html">الطوارئ والأمان</a></li>
+        <li><a href="analytics.html">التحليل والتوقعات</a></li>
+        <li><a href="reports.html">التقارير</a></li>
+      </ul>
+    </div>
+
+    <!-- الدعم الفني -->
+    <div class="f-col">
+      <h4>الدعم الفني</h4>
+      <ul class="f-contact" id="fPhones"></ul>
+      <ul class="f-contact">
+        <li><svg class="i"><use href="#i-mail"/></svg><div><span>البريد الإلكتروني</span><a id="fEmail" href="#" dir="ltr">—</a></div></li>
+        <li><svg class="i"><use href="#i-clock"/></svg><div><span>ساعات الدعم</span><b id="fHours">—</b></div></li>
+        <li><svg class="i"><use href="#i-pin"/></svg><div><span>العنوان</span><b id="fAddress">—</b></div></li>
+      </ul>
+    </div>
+
+    <!-- الخريطة -->
+    <div class="f-col f-map">
+      <h4>موقع المحطة</h4>
+      <div class="map-box">
+        <iframe id="fMap" title="خريطة موقع المحطة" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="map-actions">
+        <a class="btn btn-ghost btn-sm" id="fMapOpen" target="_blank" rel="noopener"><svg class="i"><use href="#i-pin"/></svg> فتح في الخرائط</a>
+        <a class="btn btn-primary btn-sm" id="fMapRoute" target="_blank" rel="noopener"><svg class="i"><use href="#i-send"/></svg> الاتجاهات</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© <span id="fYear"></span> Smart Water Station — جميع الحقوق محفوظة</span>
+      <span>بيانات حيّة عبر Firebase Realtime Database</span>
+    </div>
+  </div>
+</footer>
+
+<div id="toastRoot" class="toast-root" aria-live="polite"></div>
+
+<!-- ملفات البرمجة: كل قسم له ملف مستقل -->
+<script src="js/config.js?v=partners20261121"></script>
+<script src="js/firebase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/loader.js?v=brand20261121"></script>
+<script src="js/navbar.js"></script>
+<script src="js/quality.js"></script>
+<script src="js/tank.js"></script>
+<script src="js/pumps.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/vehicles.js"></script>
+<script src="js/partners.js?v=partners20261121"></script>
+<script src="js/emergency.js"></script>
+<script src="js/ml-analytics.js?v=sensors2"></script>
+<script src="js/analytics.js"></script>
+<script src="js/planning.js"></script>
+<script src="js/reports.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

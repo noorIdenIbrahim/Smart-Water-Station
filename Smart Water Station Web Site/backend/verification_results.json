@@ -1,0 +1,12 @@
+{
+  "current_quality": {
+    "test_records": 2917,
+    "predictions_identical": true,
+    "max_score_difference": 1.1102230246251565e-16
+  },
+  "early_warning": {
+    "test_records": 789,
+    "predictions_identical": true,
+    "max_score_difference": 1.1102230246251565e-16
+  }
+}

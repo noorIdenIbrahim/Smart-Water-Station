@@ -1,0 +1,94 @@
+{
+  "selected_algorithm": "RandomForest",
+  "threshold": 0.5,
+  "best_parameters": {
+    "max_depth": null,
+    "min_samples_leaf": 1
+  },
+  "selection_metric": "validation balanced accuracy, then F1",
+  "cv_scoring": "balanced_accuracy",
+  "sample_counts": {
+    "train": 8781,
+    "validation": 2908,
+    "test": 2917
+  },
+  "independent_recordings": {
+    "train": 72,
+    "validation": 24,
+    "test": 24
+  },
+  "positive_counts": {
+    "train": 2858,
+    "validation": 895,
+    "test": 914
+  },
+  "test": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "f2": 1.0,
+    "false_positive_rate": 0.0,
+    "tn": 2003,
+    "fp": 0,
+    "fn": 0,
+    "tp": 914,
+    "average_precision": 1.0,
+    "roc_auc": 1.0
+  },
+  "baseline_test": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "f2": 1.0,
+    "false_positive_rate": 0.0,
+    "tn": 2003,
+    "fp": 0,
+    "fn": 0,
+    "tp": 914
+  },
+  "no_event_baseline_test": {
+    "accuracy": 0.6866643812135755,
+    "balanced_accuracy": 0.5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "f2": 0.0,
+    "false_positive_rate": 0.0,
+    "tn": 2003,
+    "fp": 0,
+    "fn": 914,
+    "tp": 0
+  },
+  "classification_report": {
+    "0": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2003.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 914.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2917.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2917.0
+    }
+  },
+  "positive_class": "outside_ESP32_operating_limits"
+}

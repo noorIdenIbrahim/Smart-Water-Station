@@ -1,0 +1,69 @@
+/* ===== تعبئة المركبات ===== */
+.veh-top{display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:22px;align-items:start}
+.veh-side{display:grid;gap:22px}
+
+/* ربط الشركة */
+.partner-info{
+  margin-top:4px;padding:10px 12px;border-radius:12px;background:#f0fdf4;border:1px solid #bbf7d0;
+  color:#166534;font-size:.86rem;font-weight:600;line-height:1.6;
+}
+.partner-info[hidden],.link-btn[hidden]{display:none}
+.partner-info.low{background:var(--warn-bg);border-color:#fde68a;color:#92400e}
+.link-btn{align-self:flex-start;margin-top:4px}
+input[readonly]{background:#eef4f1;color:var(--muted)}
+.tag-partner{display:inline-block;margin-inline-start:6px;padding:0 8px;border-radius:99px;background:var(--foam);color:var(--ocean);font-size:.75rem;font-weight:800}
+
+/* قائمة الشروط */
+.checks{display:flex;flex-direction:column;gap:10px}
+.checks li{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:12px;background:#f6f9f8;border:1px solid var(--line)}
+.checks .mark{
+  width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-items:center;color:#fff;margin-top:2px;
+}
+.checks .mark .i{width:16px;height:16px;stroke-width:3}
+.checks li.ok .mark{background:var(--good)}
+.checks li.fail .mark{background:var(--bad)}
+.checks li.fail{background:#fff5f5;border-color:#fecaca}
+.checks b{display:block;font-size:.95rem;color:var(--navy)}
+.checks small{color:var(--muted);font-size:.84rem}
+
+/* حالة التعبئة */
+.live-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed var(--line);font-weight:600}
+.progress-block{margin-top:14px}
+.progress-label{display:flex;justify-content:space-between;font-size:.9rem;color:var(--muted);font-weight:600;margin-bottom:6px}
+.progress-label b{color:var(--navy)}
+.progress{height:12px;border-radius:99px;background:#e1ece8;overflow:hidden}
+.progress span{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#76edc9,#12877f);transition:width .8s ease}
+.progress.alt span{background:linear-gradient(90deg,#4ade80,#16a34a)}
+
+/* التقارير */
+.veh-reports{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:22px;align-items:start}
+.donut-wrap{max-width:240px;margin:0 auto}
+.donut-legend{margin-top:16px;display:flex;flex-direction:column;gap:8px}
+.donut-legend li{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:600;font-size:.92rem}
+.donut-legend i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-inline-end:8px}
+.donut-legend b{color:var(--navy)}
+
+.table-tools{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-bottom:6px}
+.table-tools .card-title{margin:0}
+.tools-right{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.tools-right input{width:240px;padding:8px 12px}
+
+@media (max-width:980px){
+  .veh-top,.veh-reports{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .tools-right input{width:100%}
+}
+
+/* Vehicle entry and compact readiness tiles. */
+#vehicles .veh-top{grid-template-columns:minmax(340px,1fr) minmax(380px,1.2fr);gap:24px}
+#vehicles .filling-form{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:28px;border-top:4px solid #087f78}
+#vehicles .filling-form .card-title,#vehicles .filling-form .field:first-of-type,#vehicles #vehSubmit{grid-column:1/-1}
+#vehicles .filling-form .field{min-width:0;margin:0}#vehicles #vehSubmit{width:100%;margin-top:8px}
+#vehicles .readiness-summary{background:#e7f5f1;color:#096b61;border-radius:10px;padding:12px 16px;margin:14px 0 18px;font-weight:700}
+#vehicles .checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0;padding:0;list-style:none}
+#vehicles .checks li{display:flex;align-items:flex-start;gap:10px;margin:0;padding:16px;border-radius:14px;background:#f5faf8;border:1px solid #dceae5;border-inline-start:3px solid #178857}
+#vehicles .checks li.fail{background:#fff6f5;border-color:#f1d9d7;border-inline-start-color:#c33c37}
+#vehicles .checks li small{display:block;line-height:1.8;margin-top:7px}#vehicles .checks .mark{flex-shrink:0}
+@media(max-width:1000px){#vehicles .veh-top{grid-template-columns:1fr}}
+@media(max-width:580px){#vehicles .filling-form,#vehicles .checks{grid-template-columns:1fr}#vehicles .filling-form{padding:20px}}

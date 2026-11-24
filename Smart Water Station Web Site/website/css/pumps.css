@@ -1,0 +1,35 @@
+/* ===== المضخات ===== */
+.pumps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+
+.pump-card{display:flex;align-items:center;gap:22px;padding:26px;transition:box-shadow .3s,border-color .3s}
+.pump-card.is-on{border-color:#86efac;box-shadow:0 14px 36px rgba(22,163,74,.16)}
+.pump-card.is-off{border-color:#fecaca}
+
+.pump-visual{
+  width:112px;height:112px;flex:none;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle,#fff 40%,#eef4f1 100%);border:1px solid var(--line);
+}
+.pump-rotor{width:86px;height:86px}
+.pr-ring{fill:none;stroke:#b9d3de;stroke-width:5}
+.pr-blades path{fill:#94a9b4;transition:fill .4s}
+.pr-hub{fill:#6b7c82;transition:fill .4s}
+.pr-blades{transform-box:view-box;transform-origin:50% 50%}
+
+.pump-card.is-on .pr-ring{stroke:#4ade80}
+.pump-card.is-on .pr-blades path{fill:var(--sky)}
+.pump-card.is-on .pr-hub{fill:var(--ocean)}
+.pump-card.is-on .pr-blades{animation:spin 1.1s linear infinite}
+.pump-card.is-off .pr-ring{stroke:#fca5a5}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.pump-info h3{font-size:1.3rem;font-weight:800;color:var(--navy)}
+.pump-info p{color:var(--muted);font-size:.9rem;margin:2px 0 12px}
+.pump-state{font-size:1rem;padding:5px 16px}
+
+.pumps-summary{margin-top:20px;color:var(--muted);font-weight:600;display:flex;flex-wrap:wrap;gap:8px 22px}
+.pumps-summary b{color:var(--navy)}
+.pumps-summary .warn-note{color:var(--bad)}
+
+@media (max-width:480px){
+  .pump-card{flex-direction:column;text-align:center}
+}

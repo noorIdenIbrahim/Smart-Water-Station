@@ -1,0 +1,218 @@
+{
+  "input_file": "water_station_cleaned (1).csv",
+  "input_sha256": "069971c3c5590399fe1091807bb66b8784c1800b615df07a704152fb00a26e32",
+  "rows": 14606,
+  "recordings": 120,
+  "seed": 42,
+  "window_readings": 12,
+  "window_span_seconds": 55,
+  "forecast_horizon_seconds": 60,
+  "window_audit": {
+    "eligible_future_targets": 6778,
+    "complete_past_windows": 4419,
+    "positive_windows": 753
+  },
+  "data_origin_counts": {
+    "synthetic_simulation": 14606
+  },
+  "results": {
+    "current_quality": {
+      "selected_algorithm": "RandomForest",
+      "threshold": 0.5,
+      "best_parameters": {
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      "selection_metric": "validation balanced accuracy, then F1",
+      "cv_scoring": "balanced_accuracy",
+      "sample_counts": {
+        "train": 8781,
+        "validation": 2908,
+        "test": 2917
+      },
+      "independent_recordings": {
+        "train": 72,
+        "validation": 24,
+        "test": 24
+      },
+      "positive_counts": {
+        "train": 2858,
+        "validation": 895,
+        "test": 914
+      },
+      "test": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "f2": 1.0,
+        "false_positive_rate": 0.0,
+        "tn": 2003,
+        "fp": 0,
+        "fn": 0,
+        "tp": 914,
+        "average_precision": 1.0,
+        "roc_auc": 1.0
+      },
+      "baseline_test": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "f2": 1.0,
+        "false_positive_rate": 0.0,
+        "tn": 2003,
+        "fp": 0,
+        "fn": 0,
+        "tp": 914
+      },
+      "no_event_baseline_test": {
+        "accuracy": 0.6866643812135755,
+        "balanced_accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "f2": 0.0,
+        "false_positive_rate": 0.0,
+        "tn": 2003,
+        "fp": 0,
+        "fn": 914,
+        "tp": 0
+      },
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2003.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 914.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2917.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2917.0
+        }
+      },
+      "positive_class": "outside_ESP32_operating_limits"
+    },
+    "early_warning": {
+      "selected_algorithm": "RandomForest",
+      "threshold": 0.40000000000000013,
+      "best_parameters": {
+        "max_depth": 10,
+        "min_samples_leaf": 4
+      },
+      "selection_metric": "validation F2, then precision and balanced accuracy",
+      "cv_scoring": "average_precision",
+      "sample_counts": {
+        "train": 2819,
+        "validation": 811,
+        "test": 789
+      },
+      "independent_recordings": {
+        "train": 72,
+        "validation": 23,
+        "test": 23
+      },
+      "positive_counts": {
+        "train": 523,
+        "validation": 103,
+        "test": 127
+      },
+      "test": {
+        "accuracy": 0.8757921419518377,
+        "balanced_accuracy": 0.8878012227323548,
+        "precision": 0.572139303482587,
+        "recall": 0.905511811023622,
+        "f1": 0.7012195121951219,
+        "f2": 0.8110014104372355,
+        "false_positive_rate": 0.1299093655589124,
+        "tn": 576,
+        "fp": 86,
+        "fn": 12,
+        "tp": 115,
+        "average_precision": 0.7330771960621306,
+        "roc_auc": 0.8881461569569664
+      },
+      "baseline_test": {
+        "accuracy": 0.9226869455006337,
+        "balanced_accuracy": 0.8266586578490378,
+        "precision": 0.8055555555555556,
+        "recall": 0.6850393700787402,
+        "f1": 0.7404255319148936,
+        "f2": 0.7061688311688312,
+        "false_positive_rate": 0.03172205438066465,
+        "tn": 641,
+        "fp": 21,
+        "fn": 40,
+        "tp": 87
+      },
+      "no_event_baseline_test": {
+        "accuracy": 0.8390367553865653,
+        "balanced_accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "f2": 0.0,
+        "false_positive_rate": 0.0,
+        "tn": 662,
+        "fp": 0,
+        "fn": 127,
+        "tp": 0
+      },
+      "classification_report": {
+        "0": {
+          "precision": 0.9795918367346939,
+          "recall": 0.8700906344410876,
+          "f1-score": 0.9216,
+          "support": 662.0
+        },
+        "1": {
+          "precision": 0.572139303482587,
+          "recall": 0.905511811023622,
+          "f1-score": 0.7012195121951219,
+          "support": 127.0
+        },
+        "accuracy": 0.8757921419518377,
+        "macro avg": {
+          "precision": 0.7758655701086404,
+          "recall": 0.8878012227323548,
+          "f1-score": 0.8114097560975609,
+          "support": 789.0
+        },
+        "weighted avg": {
+          "precision": 0.9140069549564713,
+          "recall": 0.8757921419518377,
+          "f1-score": 0.8861268416334352,
+          "support": 789.0
+        }
+      },
+      "positive_class": "violation_in_next_60_seconds_while_currently_within_limits"
+    }
+  },
+  "limitations": [
+    "Synthetic-data performance is not real water potability evidence.",
+    "Current labels reproduce the same rules used to generate them.",
+    "Windows overlap within recordings; sample count is not independent event count.",
+    "Test recordings come from a previously used synthetic generator; this is not a fresh external benchmark.",
+    "F2 selection may increase false alerts; test rates must be reviewed.",
+    "Probabilities are uncalibrated.",
+    "No model was retrained on validation or test after selection.",
+    "No Firebase access or automatic pump control."
+  ]
+}

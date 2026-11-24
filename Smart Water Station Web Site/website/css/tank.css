@@ -1,0 +1,55 @@
+/* ===== الخزان ===== */
+.tank-layout{display:grid;grid-template-columns:minmax(260px,380px) 1fr;gap:22px;align-items:stretch}
+
+.tank-card{display:grid;place-items:center;background:linear-gradient(180deg,#f7fcfe,#e8f6fb)}
+.tank-figure{position:relative;width:min(300px,100%)}
+.tank-svg{width:100%;height:auto;display:block;overflow:visible}
+.tank-body{fill:#f3fafc}
+.tank-outline{fill:none;stroke:#0b726b;stroke-width:5}
+.tank-glass{fill:rgba(255,255,255,.55)}
+.tank-ticks line{stroke:#7fa6b6;stroke-width:2}
+.tank-ticks text{fill:#607078;font-size:11px;font-weight:700;font-family:'Cairo',sans-serif}
+#tankWater{transition:transform 1.2s cubic-bezier(.4,.1,.2,1)}
+
+.tank-pct{position:absolute;inset:0 0 0 0;display:grid;place-items:center;pointer-events:none;padding-bottom:10px}
+.tank-pct strong{
+  font-size:3rem;font-weight:800;color:#fff;text-shadow:0 2px 14px rgba(16,63,70,.55);
+  background:rgba(16,63,70,.18);padding:2px 18px;border-radius:16px;backdrop-filter:blur(2px);
+}
+.tank-pct strong.dark{color:var(--navy);text-shadow:none;background:rgba(255,255,255,.7)}
+
+.tank-info{display:flex;flex-direction:column;gap:20px}
+.tank-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.tank-head .badge{font-size:1.05rem;padding:5px 18px}
+.tank-sub{color:var(--muted);font-weight:600}
+
+.tank-liters{display:flex;flex-direction:column}
+.tank-liters span{color:var(--muted);font-weight:700}
+.tank-liters strong{font-size:3.2rem;font-weight:800;color:var(--navy);line-height:1.15}
+.tank-liters strong small{font-size:1.2rem;color:var(--ocean)}
+.tank-liters em{font-style:normal;color:var(--muted);font-size:.95rem}
+
+.tank-bar{height:16px;border-radius:99px;background:#e1ece8;overflow:hidden}
+.tank-bar span{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#3fb5a6,#0b5d57);transition:width 1s ease,background .4s}
+.tank-bar span.warn{background:linear-gradient(90deg,#fbbf24,#d97706)}
+.tank-bar span.bad{background:linear-gradient(90deg,#f87171,#b91c1c)}
+
+.tank-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tank-stats div{background:var(--foam);border-radius:14px;padding:12px 14px}
+.tank-stats dt{color:var(--muted);font-size:.82rem;font-weight:700}
+.tank-stats dd{font-size:1.15rem;font-weight:800;color:var(--navy)}
+
+.tank-dims{
+  margin-top:auto;padding:14px 16px;border-radius:14px;background:#f6f9f8;border:1px dashed #b8d6e2;
+  display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem;color:var(--muted);font-weight:600;
+}
+.tank-dims b{color:var(--navy);width:100%}
+.tank-dims em{font-style:normal;color:var(--ocean);font-weight:800}
+
+@media (max-width:860px){
+  .tank-layout{grid-template-columns:1fr}
+  .tank-stats{grid-template-columns:1fr 1fr 1fr}
+}
+@media (max-width:480px){
+  .tank-stats{grid-template-columns:1fr}
+}

@@ -1,0 +1,51 @@
+{
+  "current_quality": {
+    "status": "ready",
+    "source": "trained_model",
+    "model_version": "94906f451f142797",
+    "generated_at": 1795104000000,
+    "source_timestamp": 1795104000000.0,
+    "valid_until": 1795104060000.0,
+    "positive": false,
+    "score": 0.0,
+    "threshold": 0.5,
+    "score_calibrated": false,
+    "verdict": "acceptable"
+  },
+  "early_warning": {
+    "status": "ready",
+    "source": "trained_model",
+    "model_version": "2b95c4e12ee7e1fc",
+    "generated_at": 1795104000000,
+    "source_timestamp": 1795104000000.0,
+    "valid_until": 1795104060000.0,
+    "positive": false,
+    "score": 0.01426071303627598,
+    "threshold": 0.40000000000000013,
+    "score_calibrated": false,
+    "horizon_seconds": 60
+  },
+  "tomorrow_plan": {
+    "status": "ready",
+    "generated_at": 1795104000000,
+    "valid_until": 1795104060000.0,
+    "source": "planning_estimate",
+    "trained_ml_model": false,
+    "target_date": "2026-11-20",
+    "confirmed_m3": 20.0,
+    "predicted_extra_m3": 27.5,
+    "total_m3": 47.5,
+    "usable_stock_m3": 50.0,
+    "reserve_m3": 10.0,
+    "required_production_m3": 7.5,
+    "expected_individuals": 5,
+    "historical_orders_used": 2,
+    "average_individual_m3": 5.5,
+    "production_requires_quality_clearance": false
+  },
+  "service_status": {
+    "status": "running",
+    "generated_at": 1795104000000,
+    "valid_until": 1795104060000
+  }
+}
