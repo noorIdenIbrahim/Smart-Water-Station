@@ -12,7 +12,7 @@ A smart water station management system built with ESP32, Firebase Realtime Data
 
 ## Technologies
 
-- **Hardware simulation:** ESP32 and Wokwi
+- **Hardware simulation:** ESP32-S3 and Wokwi
 - **Web dashboard:** HTML, CSS, and JavaScript
 - **Database:** Firebase Realtime Database
 - **Machine learning:** Python and Scikit-learn
@@ -26,8 +26,14 @@ A smart water station management system built with ESP32, Firebase Realtime Data
 
 [Open the web dashboard](https://smart-water-station-5mg0.onrender.com)
 
+## AI Models
+
+The trained AI models are included in the `backend/models` folder. To generate predictions, run the Python analysis service (`backend/service.py`) locally on your computer with the required dependencies and Firebase credentials configured.
+Hosting the web dashboard alone does not run the AI models. Keep the local analysis service running to update AI results on the dashboard.
+
 ## Notes
 
 Live readings require the simulator to be running and successfully sending data to Firebase. AI results require the Python analysis service to be running.
+
 
 The machine learning models were trained on synthetic data for academic simulation. Their outputs are not a certification of drinking-water safety.
