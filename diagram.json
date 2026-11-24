@@ -1,0 +1,280 @@
+{
+  "version": 1,
+  "author": "Noor iden Ibrahim",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 67.02,
+      "left": 186.97,
+      "attrs": { "env": "micropython-20260406-v1.28.0", "flashSize": "8" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 63.6,
+      "left": -63.4,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": 178.8, "left": -73, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 121.2,
+      "left": -73,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 138.35,
+      "left": 38.4,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 157.55,
+      "left": 28.8,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 186.35,
+      "left": 28.8,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 652.8, "left": -115.8, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -324.9,
+      "left": -52.1,
+      "attrs": { "distance": "193" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": 240.76, "left": -307.2, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 9.8, "left": 1440, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -260.5, "left": 364.6, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -260.5, "left": 489.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot3", "top": -260.5, "left": 643, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot4", "top": -260.5, "left": 796.6, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": -125.6,
+      "left": 289.4,
+      "rotate": 270,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": -61.2,
+      "left": 291.8,
+      "rotate": 270,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": -297.6,
+      "left": 355.2,
+      "attrs": { "text": "Sensor TDS" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": -297.6,
+      "left": 489.6,
+      "attrs": { "text": "Sensor PH" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": -297.6,
+      "left": 787.2,
+      "attrs": { "text": "Sensor DO" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": -297.6,
+      "left": 604.8,
+      "attrs": { "text": "Sensor TURBIDITY" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 613.8,
+      "left": 819,
+      "rotate": 90,
+      "attrs": { "color": "white", "xray": "1", "bounce": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led6",
+      "top": 644.8,
+      "left": 282.6,
+      "rotate": 180,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led7",
+      "top": 644.8,
+      "left": 340.2,
+      "rotate": 180,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay2", "top": 528.2, "left": 1430.4, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay3", "top": -374.2, "left": 1420.8, "attrs": {} },
+    {
+      "type": "wokwi-text",
+      "id": "text5",
+      "top": -19.2,
+      "left": 1468.8,
+      "attrs": { "text": "Pump Falter \n" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text6",
+      "top": -422.4,
+      "left": 1382.4,
+      "attrs": { "text": "Submersible Pump   (Main Pump)" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led8",
+      "top": -454.8,
+      "left": 1107.8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led9",
+      "top": -454.8,
+      "left": 1203.8,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic2",
+      "top": 510.3,
+      "left": 514.3,
+      "attrs": { "distance": "233" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn2",
+      "top": 624.5,
+      "left": 982.7,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text8",
+      "top": 499.2,
+      "left": 1430.4,
+      "attrs": { "text": "Pump Track  Water " }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text7",
+      "top": 672,
+      "left": 787.2,
+      "attrs": { "text": "Sensors YF-S201\n" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text9",
+      "top": 652.8,
+      "left": 960,
+      "attrs": { "text": "Button  Start \n" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text10",
+      "top": 729.6,
+      "left": 556.8,
+      "attrs": { "text": " Level Track Water \n\n" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text11",
+      "top": -403.2,
+      "left": 547.2,
+      "attrs": { "text": "Sensor Falter Water \n\n" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text12",
+      "top": -412.8,
+      "left": -57.6,
+      "attrs": { "text": "Sensor Level Tank \n\n" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "r1:1", "led1:A", "gray", [ "v0" ] ],
+    [ "r2:1", "led3:A", "gold", [ "v0" ] ],
+    [ "r3:1", "led2:A", "#8f4814", [ "v0" ] ],
+    [ "r1:2", "esp:16", "green", [ "h46.8", "v28.8" ] ],
+    [ "r3:2", "esp:18", "#8f4814", [ "h104.45" ] ],
+    [ "led1:C", "gnd1:GND", "black", [ "v0", "h-47.6" ] ],
+    [ "led3:C", "gnd1:GND", "black", [ "v0", "h-47.6" ] ],
+    [ "led2:C", "gnd1:GND", "black", [ "v0", "h-47.6" ] ],
+    [ "r2:2", "esp:17", "gold", [ "h46.8", "v38.4" ] ],
+    [ "esp:GND.1", "gnd1:GND", "black", [ "h0" ] ],
+    [ "gnd1:GND", "ultrasonic1:GND", "black", [ "v-633.6", "h154.8" ] ],
+    [ "ultrasonic1:TRIG", "esp:4", "violet", [ "v9.6", "h66.8", "v163.2" ] ],
+    [ "ultrasonic1:ECHO", "esp:5", "orange", [ "v19.2", "h37.6", "v163.2" ] ],
+    [ "pot4:GND", "esp:GND.4", "black", [ "v0" ] ],
+    [ "pot3:GND", "esp:GND.4", "black", [ "v0" ] ],
+    [ "pot1:GND", "esp:GND.4", "black", [ "v0" ] ],
+    [ "pot2:GND", "esp:GND.4", "black", [ "v0" ] ],
+    [ "relay1:GND", "esp:GND.4", "black", [ "h-153.6", "v18.8" ] ],
+    [ "esp:3V3.1", "pot2:VCC", "red", [ "h-67.25", "v-259.2", "h288.8" ] ],
+    [ "esp:3V3.1", "pot1:VCC", "red", [ "h-48.05", "v-249.6", "h394.4" ] ],
+    [ "pot3:VCC", "esp:3V3.1", "red", [ "v48", "h-519.2", "v240" ] ],
+    [ "pot4:VCC", "esp:3V3.1", "red", [ "v57.6", "h-653.6", "v230.4" ] ],
+    [ "relay1:VCC", "esp:5V", "red", [ "h-67.2", "v403.2", "h-1228.8", "v-144" ] ],
+    [ "ultrasonic1:VCC", "esp:5V", "red", [ "v28.8", "h-144", "v489.6" ] ],
+    [ "vcc1:VCC", "esp:5V", "red", [ "v0" ] ],
+    [ "relay1:IN", "esp:13", "limegreen", [ "h-28.8", "v335.8", "h-1257.6", "v-115.2" ] ],
+    [ "pot2:SIG", "esp:9", "blue", [ "v556.8", "h-336.4", "v-96" ] ],
+    [ "pot1:SIG", "esp:10", "magenta", [ "v595.2", "h-442", "v-163.2" ] ],
+    [ "esp:11", "pot3:SIG", "magenta", [ "h-86.45", "v115.2", "h585.6" ] ],
+    [ "esp:12", "pot4:SIG", "yellow", [ "h-57.65", "v86.4", "h652.8" ] ],
+    [ "led4:A", "esp:8", "gray", [ "h0", "v-19.2", "h-220.8", "v336" ] ],
+    [ "led5:A", "esp:3", "red", [ "v-19.2", "h-211.2", "v268.8" ] ],
+    [ "led5:C", "esp:GND.2", "black", [ "h45.6", "v108" ] ],
+    [ "led4:C", "esp:GND.2", "black", [ "h48", "v18.8" ] ],
+    [ "relay3:GND", "esp:GND.4", "black", [ "h-134.4", "v642.8" ] ],
+    [ "relay3:VCC", "esp:5V", "red", [ "h-48", "v787.2", "h-1228.8", "v-144" ] ],
+    [ "relay2:VCC", "esp:5V", "red", [ "h-57.6", "v-115.2", "h-1228.8", "v-144" ] ],
+    [ "led7:C", "esp:GND.4", "black", [ "v0" ] ],
+    [ "led6:C", "esp:GND.4", "black", [ "v-355.2", "h-10" ] ],
+    [ "esp:1", "relay3:IN", "limegreen", [ "h864", "v-460.6" ] ],
+    [ "esp:2", "led9:A", "gray", [ "h0" ] ],
+    [ "led8:A", "esp:42", "#8f4814", [ "v0" ] ],
+    [ "esp:GND.2", "led8:C", "black", [ "v0", "h796.8" ] ],
+    [ "esp:GND.2", "led9:C", "black", [ "v0", "h921.6" ] ],
+    [ "esp:GND.4", "relay2:GND", "black", [ "h1008", "v268.8" ] ],
+    [ "btn1:1.l", "esp:39", "white", [ "v0" ] ],
+    [ "ultrasonic2:TRIG", "esp:38", "magenta", [ "v19.2", "h-163.6", "v-508.8" ] ],
+    [ "esp:37", "ultrasonic2:ECHO", "orange", [ "h96", "h19.2", "v451.2", "h212" ] ],
+    [ "ultrasonic2:GND", "esp:GND.4", "black", [ "v9.6", "h152.4", "v-384" ] ],
+    [ "ultrasonic2:VCC", "esp:5V", "red", [ "v9.6", "h-105.6", "v-249.6", "h-326.4", "v-144" ] ],
+    [ "esp:45", "led7:A", "#8f4814", [ "h0" ] ],
+    [ "led6:A", "esp:48", "gray", [ "v0" ] ],
+    [ "btn2:2.l", "esp:GND.4", "black", [ "h-0.4", "v-326.4" ] ],
+    [ "btn1:2.l", "gnd1:GND", "black", [ "v-134.4", "h-38.6" ] ],
+    [ "esp:47", "btn2:1.l", "purple", [ "h729.6", "v374.4" ] ],
+    [ "esp:36", "relay2:IN", "green", [ "h835.2", "v278.4" ] ]
+  ],
+  "dependencies": {}
+}
